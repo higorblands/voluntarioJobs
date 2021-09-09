@@ -9,6 +9,7 @@ echo "<p>Tabela usuario apagada com sucesso !</p>";
 /* CRIAR TABELA E POPULAR COM VALORES */
 $sql ="CREATE TABLE usuario(";
 $sql .= "codigo SERIAL NOT NULL,";
+$sql .= "tipoUsuario VARCHAR(50),";
 $sql .= "nome VARCHAR(250),";
 $sql .= "email VARCHAR(100),";
 $sql .= "senha VARCHAR(150),";
