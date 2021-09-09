@@ -17,7 +17,7 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != "" ){
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clique Vagas Caruaru</title>
+    <title>voluntárioJobs</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style/principal.css" />
     <link rel="stylesheet" href="style/index.css" />
@@ -26,7 +26,7 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != "" ){
   <body class="bg2">
     <div class="container">
       <div class="titulo bg1">
-        <a class="limpartitulo" href="index.php"> <img src="images/logo.png" /> Clique Vagas Caruaru</a>
+        <a class="limpartitulo" href="index.php"> <img src="images/logo.png" /> voluntárioJobs</a>
       </div>
       <div class="conteudo">
       <a class="botao bg3" <?= ($sessao) ? 'style="display:block"' : 'style="display:none"'  ?> href="perfil.php">Entrar no seu perfil</a>
@@ -36,7 +36,7 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != "" ){
 
         </div>
         <div class="pesquisa">
-          <p class="mensagem">Encontre uma oportunidade de emprego.</p>
+          <p class="mensagem">Veja as oportunidades disponíveis.</p>
           <form action="index.php" method="post">
             <div class="caixatexto">
               <input name="busca" type="text" placeholder="Procure sua vaga" value="<?= ($busca) ? $_POST["busca"] : '' ?>" />
