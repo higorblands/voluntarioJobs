@@ -33,7 +33,6 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != "" ){
         <div class="menu" <?= ($busca || $sessao) ? 'style="display:none"' : "" ?> >
           <a class="botao bg3" href="login.php">Entrar</a>
           <a class="botao bg4" href="register.html">Cadastrar</a>
-
         </div>
         <div class="pesquisa">
           <p class="mensagem">Veja as oportunidades disponíveis.</p>
