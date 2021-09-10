@@ -3,21 +3,21 @@ require("controllers/autentication.php");
 
 require("model/persistency/db.php");
 
-$sql = "SELECT nome FROM empresa WHERE codigo=" . $_SESSION['usuario'];
+$sql = "SELECT nome FROM usuario WHERE codigo=" . $_SESSION['usuario'];
 $resultado = banco($sql);
 $resultado = pg_fetch_assoc($resultado);
 $empresa = $resultado['nome'];
 
-$sql = "SELECT * FROM anuncios  WHERE codigo_empresa=" . $_SESSION['usuario'] . "ORDER BY data_insercao DESC";
+$sql = "SELECT * FROM anuncios  WHERE codigo_usuario=" . $_SESSION['usuario'] . "ORDER BY data_insercao DESC";
 $resultado = banco($sql);
-//$resultado = pg_fetch_assoc($resultado);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clique Vagas Caruaru</title>
+    <title>voluntárioJobs</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style/principal.css" />
     <link rel="stylesheet" href="style/botoes.css" />
@@ -28,7 +28,7 @@ $resultado = banco($sql);
     <div class="container">
       <div class="titulo bg1">
       <a href="index.php"> <img   src="images/logo.png" /></a>
-      <a class="limpartitulo" href="index.php"> Clique Vagas Caruaru</a>
+      <a class="limpartitulo" href="index.php"> voluntárioJobs</a>
       </div>
       <div class="conteudo">
       <h3 class="empresa"><?= $empresa ?></h3>
